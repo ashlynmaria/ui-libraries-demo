@@ -21,7 +21,7 @@ This project is a comprehensive showcase of popular React UI libraries, includin
 
 This project serves as a learning resource for developers interested in exploring different UI libraries for React. It provides a side-by-side comparison of components from Material UI, Flowbite, shadcn/ui, and Chakra UI, allowing developers to make informed decisions about which library best suits their needs.
 
-## [Live demo is available (https://ui-libraries-demo.vercel.app/)]
+## [Live demo is available](https://ui-libraries-demo.vercel.app/)
 
 ## Libraries Comparison
 
