@@ -39,7 +39,7 @@ To set up this project locally, follow these steps:
 1. Clone the repository:
    ```
    git clone git@github.com:prakash-aryan/ui-libraries-demo.git
-   cd modern-ui-libraries-demo
+   cd ui-libraries-demo
    ```
 
 2. Install dependencies:
