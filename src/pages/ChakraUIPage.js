@@ -18,7 +18,13 @@ import {
   StatNumber,
   StatHelpText,
   StatArrow,
-  StatGroup
+  StatGroup,
+  Progress,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
 } from "@chakra-ui/react";
 
 const theme = extendTheme({
@@ -111,6 +117,30 @@ function ChakraUIPage() {
           </Box>
         </Box>
 
+        {/* Progress Section */}
+        <Box mb={12}>
+        <Heading as="h2" size="xl" mb={4}>Progress</Heading>
+        <Text mb={4}>The Progress component is used to display the progress status for a task that takes a long time or consists of several steps. </Text>
+        <Box p={6} borderWidth={1} borderRadius="lg">
+          <Progress colorScheme='green' size='lg' value={40} />
+        </Box>
+        </Box>
+
+        {/* Number Input Section */}
+        <Box mb={12}>
+        <Heading as="h2" size="xl" mb={4}>Number Input</Heading>
+        <Text mb={4}>The NumberInput component is similar to the Input component, but it has controls for incrementing or decrementing numeric values.</Text>
+        <Box p={6} borderWidth={1} borderRadius="lg">
+          <NumberInput defaultValue={15}>
+            <NumberInputField />
+            <NumberInputStepper>
+              <NumberIncrementStepper />
+              <NumberDecrementStepper />
+            </NumberInputStepper>
+          </NumberInput>
+        </Box>
+        </Box>
+
         {/* Custom Badge Section */}
         <Box mb={12}>
           <Heading as="h2" size="xl" mb={4}>Custom Badge</Heading>
@@ -151,7 +181,7 @@ function ChakraUIPage() {
         </Box>
 
         {/* Custom Stats Section */}
-        <Box>
+        <Box mb ={12}>
           <Heading as="h2" size="xl" mb={4}>Custom Stats</Heading>
           <Text mb={4}>Customized stat components with different colors and layouts.</Text>
           <Box p={6} borderWidth={1} borderRadius="lg">
@@ -175,7 +205,31 @@ function ChakraUIPage() {
             </Flex>
           </Box>
         </Box>
+
+
+        {/* Custom Number Input Section */}
+        <Box mb={12}>
+        <Heading as="h2" size="xl" mb={4}>Custom Number Input Section</Heading>
+        <Text mb={4}>A customized number input with a different color scheme.</Text>
+        <Box p={6} borderWidth={1} borderRadius="lg">
+        <NumberInput size='sm' defaultValue={15} min={10}>
+          <NumberInputField focusBorderColor='red.200' />
+          <NumberInputStepper>
+            <NumberIncrementStepper
+              bg='yellow.200'
+              _active={{ bg: 'yellow.300' }}
+              children='+'
+            />
+            <NumberDecrementStepper
+              bg='green.200'
+              _active={{ bg: 'green.300' }}
+              children='-'
+            />
+            </NumberInputStepper>
+          </NumberInput>
+        </Box>
       </Box>
+    </Box> 
     </ChakraProvider>
   );
 }
