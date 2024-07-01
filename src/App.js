@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
 import { ChakraProvider } from "@chakra-ui/react";
-import MaterialUIPage from './pages/MaterialUIPage';
-import FlowbitePage from './pages/FlowbitePage';
-import ShadcnPage from './pages/ShadcnPage';
+// import MaterialUIPage from './pages/MaterialUIPage';
+// import FlowbitePage from './pages/FlowbitePage';
+// import ShadcnPage from './pages/ShadcnPage';
 import ChakraUIPage from './pages/ChakraUIPage';
 
 function NavLink({ to, children, onClick }) {
@@ -46,9 +46,9 @@ function Navigation() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/material-ui">Material UI</NavLink>
-              <NavLink to="/flowbite">Flowbite</NavLink>
-              <NavLink to="/shadcn">shadcn/ui</NavLink>
+              {/* <NavLink to="/material-ui">Material UI</NavLink> */}
+              {/* <NavLink to="/flowbite">Flowbite</NavLink> */}
+              {/* <NavLink to="/shadcn">shadcn/ui</NavLink> */}
               <NavLink to="/chakra-ui">Chakra UI</NavLink>
             </div>
           </div>
@@ -79,9 +79,9 @@ function Navigation() {
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <NavLink to="/" onClick={closeMenu}>Home</NavLink>
-            <NavLink to="/material-ui" onClick={closeMenu}>Material UI</NavLink>
-            <NavLink to="/flowbite" onClick={closeMenu}>Flowbite</NavLink>
-            <NavLink to="/shadcn" onClick={closeMenu}>shadcn/ui</NavLink>
+            {/* <NavLink to="/material-ui" onClick={closeMenu}>Material UI</NavLink> */}
+            {/* <NavLink to="/flowbite" onClick={closeMenu}>Flowbite</NavLink> */}
+            {/* <NavLink to="/shadcn" onClick={closeMenu}>shadcn/ui</NavLink> */}
             <NavLink to="/chakra-ui" onClick={closeMenu}>Chakra UI</NavLink>
           </div>
         </div>
@@ -92,22 +92,22 @@ function Navigation() {
 
 function Home() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gradient-to-r from-green-300 via-pink-300 to-green-300 min-h-screen">
       <div className="max-w-7xl mx-auto py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 sm:tracking-tight lg:text-6xl">
             Explore Modern UI Libraries
           </h1>
           <p className="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl text-gray-500">
-            Explore React UI components with this interactive showcase featuring Material UI, Flowbite, shadcn/ui, and Chakra UI.
+            Explore React UI components with this interactive showcase featuring Chakra UI.
           </p>
         </div>
 
         <div className="mt-10 sm:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {[
-            { name: 'Material UI', description: 'Google\'s Material Design implemented for React', link: '/material-ui', color: 'bg-blue-500' },
-            { name: 'Flowbite', description: 'Tailwind CSS-based UI components', link: '/flowbite', color: 'bg-teal-500' },
-            { name: 'shadcn/ui', description: 'Beautifully designed components built with Radix UI and Tailwind CSS', link: '/shadcn', color: 'bg-purple-500' },
+            // { name: 'Material UI', description: 'Google\'s Material Design implemented for React', link: '/material-ui', color: 'bg-blue-500' },
+            // { name: 'Flowbite', description: 'Tailwind CSS-based UI components', link: '/flowbite', color: 'bg-teal-500' },
+            // { name: 'shadcn/ui', description: 'Beautifully designed components built with Radix UI and Tailwind CSS', link: '/shadcn', color: 'bg-purple-500' },
             { name: 'Chakra UI', description: 'Simple, modular and accessible component library', link: '/chakra-ui', color: 'bg-green-500' }
           ].map((lib) => (
             <div key={lib.name} className="bg-white overflow-hidden shadow rounded-lg flex flex-col">
@@ -141,9 +141,9 @@ function App() {
           <Navigation />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/material-ui" element={<MaterialUIPage />} />
-            <Route path="/flowbite" element={<FlowbitePage />} />
-            <Route path="/shadcn" element={<ShadcnPage />} />
+            {/* <Route path="/material-ui" element={<MaterialUIPage />} /> */}
+            {/* <Route path="/flowbite" element={<FlowbitePage />} /> */}
+            {/* <Route path="/shadcn" element={<ShadcnPage />} /> */}
             <Route path="/chakra-ui" element={<ChakraUIPage />} />
           </Routes>
         </div>
