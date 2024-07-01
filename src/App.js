@@ -92,46 +92,44 @@ function Navigation() {
 
 function Home() {
   return (
-    <div className="bg-gradient-to-r from-green-300 via-pink-300 to-green-300 min-h-screen">
-      <div className="max-w-7xl mx-auto py-6 sm:py-12 px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 sm:tracking-tight lg:text-6xl">
-            Explore Modern UI Libraries
-          </h1>
-          <p className="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl text-gray-500">
-            Explore React UI components with this interactive showcase featuring Chakra UI.
-          </p>
-        </div>
+    <div className="bg-gradient-to-r from-green-300 via-pink-300 to-green-300 min-h-screen flex flex-col justify-start items-center py-16">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-8">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 sm:tracking-tight lg:text-6xl">
+          Explore Modern UI Libraries
+        </h1>
+        <p className="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl text-gray-500">
+          Explore React UI components with this interactive showcase featuring Chakra UI.
+        </p>
+      </div>
 
-        <div className="mt-10 sm:mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {[
-            // { name: 'Material UI', description: 'Google\'s Material Design implemented for React', link: '/material-ui', color: 'bg-blue-500' },
-            // { name: 'Flowbite', description: 'Tailwind CSS-based UI components', link: '/flowbite', color: 'bg-teal-500' },
-            // { name: 'shadcn/ui', description: 'Beautifully designed components built with Radix UI and Tailwind CSS', link: '/shadcn', color: 'bg-purple-500' },
-            { name: 'Chakra UI', description: 'Simple, modular and accessible component library', link: '/chakra-ui', color: 'bg-green-500' }
-          ].map((lib) => (
-            <div key={lib.name} className="bg-white overflow-hidden shadow rounded-lg flex flex-col">
-              <div className={`${lib.color} px-4 py-5 sm:p-6 text-white`}>
-                <h3 className="text-lg leading-6 font-medium">{lib.name}</h3>
-              </div>
-              <div className="px-4 py-5 sm:p-6 flex-grow">
-                <p className="text-sm text-gray-500">{lib.description}</p>
-              </div>
-              <div className="px-4 py-4 sm:px-6">
-                <Link 
-                  to={lib.link} 
-                  className={`w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white ${lib.color} hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${lib.color}`}
-                >
-                  Explore {lib.name}
-                </Link>
-              </div>
+      <div className="mt-10 sm:mt-16">
+        {[
+          { name: 'Chakra UI', description: 'Simple, modular and accessible component library', link: '/chakra-ui', color: 'bg-green-500' }
+        ].map((lib) => (
+        
+          <div key={lib.name} className="bg-white overflow-hidden shadow rounded-lg flex flex-col items-center w-full sm:max-w-lg">
+            <div className={`${lib.color} px-4 py-5 sm:p-6 text-white w-full`}>
+              <h3 className="text-lg leading-6 font-medium">{lib.name}</h3>
             </div>
-          ))}
-        </div>
+            <div className="px-4 py-5 sm:p-6 flex-grow w-full">
+              <p className="text-sm text-gray-500">{lib.description}</p>
+            </div>
+            <div className="px-4 py-4 sm:px-6 w-full">
+              <Link 
+                to={lib.link} 
+                className={`w-full inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white ${lib.color} hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${lib.color}`}
+              >
+                Explore {lib.name}
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
+
+
 
 function App() {
   return (
